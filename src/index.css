@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ===================================================
+     Robot Head Chatbot — Minimal Luxury Cinematic System
+     =================================================== */
+
+  /* Dark Luxury Base (Obsidian, Deep Navy, Deep Space) */
+  --bg-primary: #02050a;
+  --bg-secondary: #050912;
+  --bg-tertiary: #07111b;
+  --bg-surface: rgba(7, 17, 27, 0.65);
+  --bg-surface-hover: rgba(14, 25, 40, 0.78);
+  --bg-glass: rgba(5, 9, 18, 0.72);
+  --bg-glass-card: rgba(8, 14, 25, 0.58);
+  --bg-glass-card-hover: rgba(12, 22, 38, 0.75);
+
+  /* Primary Electric Blue & Subtle Violet Accents */
+  --accent-primary: #0ea5e9;
+  --accent-hover: #38bdf8;
+  --accent-violet: #8b5cf6;
+  --accent-cyan: #22d3ee;
+  --accent-light: rgba(14, 165, 233, 0.08);
+  --accent-glow: rgba(14, 165, 233, 0.22);
+  --accent-glow-subtle: rgba(56, 189, 248, 0.12);
+  --accent-violet-glow: rgba(139, 92, 246, 0.15);
+
+  /* Editorial Off-White Typography */
+  --text-main: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-dim: #475569;
+
+  /* Restrained Luxury Borders */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-light: rgba(255, 255, 255, 0.12);
+  --border-hover: rgba(255, 255, 255, 0.2);
+  --border-accent: rgba(56, 189, 248, 0.32);
+  --border-violet: rgba(139, 92, 246, 0.25);
+
+  /* Deep Atmospheric Studio Shadows */
+  --shadow-sm: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 16px 40px -6px rgba(0, 0, 0, 0.65);
+  --shadow-lg: 0 28px 64px -12px rgba(0, 0, 0, 0.82);
+  --shadow-glow: 0 0 35px -5px rgba(14, 165, 233, 0.25);
+
+  /* Typography Stack */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'Space Grotesk', monospace;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+  background: transparent;
+}
+
+/* Headings & Editorial Typography */
+h1, h2, h3, h4 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+}
+
+p {
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent-hover);
+  outline-offset: 3px;
+}
+
+/* Section Eyebrow Tag */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.95rem;
+  border-radius: 9999px;
+  background: rgba(14, 165, 233, 0.06);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  color: var(--accent-hover);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.section-tag svg {
+  color: var(--accent-hover);
+}
+
+/* Smooth Dark Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #02050a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #131c2c;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e2e48;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
